@@ -42,7 +42,7 @@ class SelectionSorting
         cout<< "Selection Sort"<< endl;
     }
 };
-class Sorting: public BubbleSorting
+class Sorting: public BubbleSorting, SelectionSorting
 {};
 void NhapMang(vector<int>& array)
 {
@@ -65,9 +65,8 @@ void PrintMang(vector<int>& array)
 int main()
 {
     Sorting c_sort;
-    vector<int> v_mang = {1, 8, 5, 4, 7, 12, 2, 15, 6};
-    c_sort.BubbleSort(v_mang);
-    PrintMang(v_mang);
-    //NhapMang(v_mang);
+    vector<int> v_mang1 = {1, 8, 5, 4, 7, 12, 2, 15, 6};
+    c_sort.BubbleSort(v_mang1);
+    PrintMang(v_mang1);
     return 0;
 }
