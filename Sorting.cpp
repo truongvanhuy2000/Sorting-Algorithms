@@ -21,6 +21,27 @@ class BubbleSorting
         cout<< "Bubble Sort"<< endl;
     }
 };
+class SelectionSorting
+{
+    public:
+    void SelectionSort(vector<int>& array)
+    {
+        int i_min_pos = 0;
+        for(int i = 0; i < array.size(); i++)
+        {
+            i_min_pos = i;
+            for(int y = 0 + i; y < array.size(); y++)
+            {
+                if(array[y] < array[i_min_pos])
+                {
+                    i_min_pos = y;
+                }
+            }
+            swap(array[i], array[i_min_pos]);
+        }
+        cout<< "Selection Sort"<< endl;
+    }
+};
 class Sorting: public BubbleSorting
 {};
 void NhapMang(vector<int>& array)
