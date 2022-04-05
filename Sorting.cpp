@@ -42,7 +42,27 @@ class SelectionSorting
         cout<< "Selection Sort"<< endl;
     }
 };
-class Sorting: public BubbleSorting, SelectionSorting
+class InsertionSorting
+{
+    public:
+    void InsertionSort(vector<int>& array)
+    {
+        int i_key = 0;
+        for(int i = 1; i < array.size(); i++)
+        {
+            i_key = array[i];
+            for(int y = i - 1; y >= 0; y--)
+            {
+                if(array[y] > i_key)
+                {
+                    swap(array[y + 1], array[y]);
+                }
+            }
+        }
+        cout<< "Insertion Sort"<< endl;
+    }
+};
+class Sorting: public BubbleSorting, SelectionSorting, InsertionSorting
 {};
 void NhapMang(vector<int>& array)
 {
